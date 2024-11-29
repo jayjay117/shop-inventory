@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Inventory Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="store-app-div">
+            <h2>Store Inventory</h2>
+        </div>
+        <ul>
+            <li><a href="#" id="overview-link">Overview</a></li>
+            <li><a href="#" id="product-info-link">Product Information</a></li>
+            <li><a href="#" id="stock-details-link">Stock Details</a></li>
+            <li><a href="#" id="supplier-info-link">Supplier Information</a></li>
+            <li><a href="#" id="purchasing-restocking-link">Purchasing and Restocking</a></li>
+            <li><a href="#" id="sales-info-link">Sales Information</a></li>
+            <li><a href="#" id="inventory-adjustments-link">Inventory Adjustments</a></li>
+            <li><a href="#" id="pricing-info-link">Pricing Information</a></li>
+            <li><a href="#" id="reports-analysis-link">Reports and Analysis</a></li>
+            <li><a href="#" id="order-management-link">Order Management</a></li>
+            <li><a href="#" id="user-access-security-link">User Access and Security</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Overview Section -->
+        <section id="overview-section" class="section">
+            <div class="overview-section-div">
+                <h2>Overview</h2>
+            </div>
+            <div class="overview-p-div">
+                <p>Welcome, Groupone Db333</p>
+                <div class="paragraph-div">
+                    <p class="paragraph"><strong>Sales Information Overview:</strong> <span id="sales-count">0</span>
+                    </p>
+                    <p class="paragraph"><strong>Stock Details Overview:</strong> <span id="stock-count">0</span></p>
+                    <p class="paragraph"><strong>Order Management Overview:</strong> <span id="order-count">0</span></p>
+                </div>
+            </div>
+            <button id="logout-button">Log out</button>
+        </section>
+
+        <!-- Product Information Section -->
+        <section id="product-info-section" class="section">
+            <h2>Product Information</h2>
+            <form id="product-info-form">
+                <div>
+                    <label for="product-id">Unique Product ID</label>
+                    <input type="text" id="product-id" placeholder="Enter Product ID (SKU or Barcode)">
+                </div>
+                <div>
+                    <label for="product-name">Product Name</label>
+                    <input type="text" id="product-name" placeholder="Enter Product Name">
+                </div>
+                <div>
+                    <label for="product-description">Product Description</label>
+                    <textarea id="product-description" placeholder="Enter Product Description"></textarea>
+                </div>
+                <div>
+                    <label for="product-category">Product Category</label>
+                    <input type="text" id="product-category" placeholder="Enter Product Category (e.g., electronics)">
+                </div>
+                <div>
+                    <label for="manufacturer-details">Manufacturer Details</label>
+                    <input type="text" id="manufacturer-details" placeholder="Enter Manufacturer Details">
+                </div>
+                <div>
+                    <label for="unit-of-measure">Unit of Measure</label>
+                    <input type="text" id="unit-of-measure" placeholder="Enter Unit of Measure (e.g., pieces)">
+                </div>
+                <div>
+                    <label for="expiry-date">Expiry Date (if applicable)</label>
+                    <input type="date" id="expiry-date">
+                </div>
+                <button type="submit">Save Product Info</button>
+            </form>
+        </section>
+
+        <!-- Stock Details Section -->
+        <section id="stock-details-section" class="section">
+            <h2>Stock Details</h2>
+            <form id="stock-details-form">
+                <div>
+                    <label for="current-quantity">Current Quantity in Stock</label>
+                    <input type="number" id="current-quantity" placeholder="Enter current stock quantity" required>
+                </div>
+                <div>
+                    <label for="min-stock-level">Minimum Stock Level</label>
+                    <input type="number" id="min-stock-level" placeholder="Enter minimum stock level" required>
+                </div>
+                <div>
+                    <label for="max-stock-capacity">Maximum Stock Capacity</label>
+                    <input type="number" id="max-stock-capacity" placeholder="Enter maximum stock capacity" required>
+                </div>
+                <div>
+                    <label for="stock-location">Stock Location</label>
+                    <input type="text" id="stock-location" placeholder="Enter stock location" required>
+                </div>
+                <button type="button" id="save-stock-details">Save Stock Details</button>
+            </form>
+            <div id="stock-details-display" style="margin-top: 20px;">
+                <h3>Saved Stock Details</h3>
+                <p><strong>Current Quantity:</strong> <span id="display-current-quantity">N/A</span></p>
+                <p><strong>Minimum Stock Level:</strong> <span id="display-min-stock-level">N/A</span></p>
+                <p><strong>Maximum Stock Capacity:</strong> <span id="display-max-stock-capacity">N/A</span></p>
+                <p><strong>Stock Location:</strong> <span id="display-stock-location">N/A</span></p>
+            </div>
+        </section>
+
+        <!-- Supplier Information Section -->
+        <section id="supplier-info-section" class="section">
+            <h2>Supplier Information</h2>
+            <form id="supplier-info-form">
+                <div>
+                    <label for="supplier-id">Supplier ID</label>
+                    <input type="text" id="supplier-id" placeholder="Enter Supplier ID">
+                </div>
+                <div>
+                    <label for="supplier-name">Supplier Name</label>
+                    <input type="text" id="supplier-name" placeholder="Enter Supplier Name">
+                </div>
+                <div>
+                    <label for="supplier-contact">Supplier Contact</label>
+                    <input type="text" id="supplier-contact" placeholder="Enter Supplier Contact">
+                </div>
+                <div>
+                    <label for="supply-lead-time">Supply Lead Time</label>
+                    <input type="text" id="supply-lead-time" placeholder="Enter Supply Lead Time">
+                </div>
+                <div>
+                    <label for="products-supplied">Products Supplied</label>
+                    <input type="text" id="products-supplied" placeholder="Enter Products Supplied">
+                </div>
+                <div>
+                    <label for="purchase-terms">Purchase Terms</label>
+                    <input type="text" id="purchase-terms" placeholder="Enter Purchase Terms">
+                </div>
+                <button type="submit">Save Supplier Info</button>
+            </form>
+            <h3>Supplier List</h3>
+            <table class="table" id="supplier-table">
+                <thead>
+                    <tr>
+                        <th>Supplier ID</th>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Lead Time</th>
+                        <th>Products</th>
+                        <th>Terms</th>
+                    </tr>
+                </thead>
+                <tbody>
+              
+                </tbody>
+            </table>
+        </section>
+
+        <section id="purchasing-and-restocking-section" class="section">
+            <h2>Purchasing and Restocking</h2>
+            <form id="purchasing-form">
+                <div>
+                    <label for="purchase-order-id">Purchase Order ID:</label>
+                    <input type="text" id="purchase-order-id" required>
+                </div>
+                <div>
+                    <label for="purchase-product-id">Product ID:</label>
+                    <input type="text" id="purchase-product-id" required>
+                </div>
+                <div>
+                    <label for="purchase-supplier-name">Supplier Name:</label>
+                    <select id="purchase-supplier-name">
+            
+                    </select>
+                </div>
+                <div>
+                    <label for="purchase-quantity">Quantity Ordered:</label>
+                    <input type="number" id="purchase-quantity" required>
+                </div>
+                <div>
+                    <label for="purchase-date">Purchase Date:</label>
+                    <input type="date" id="purchase-date" required>
+                </div>
+                <div>
+                    <label for="expected-delivery-date">Expected Delivery Date:</label>
+                    <input type="date" id="expected-delivery-date" required>
+                </div>
+                <button type="submit">Save Purchase</button>
+            </form>
+        </section>
+
+
+        <!-- <section id="purchasing-and-restocking-section" class="section">
+
+            <h2>Purchasing and Restocking</h2>
+            <form id="purchasing-form">
+                <div>
+                    <label for="purchase-order-id">Purchase Order ID:</label>
+                    <input type="text" id="purchase-order-id" required>
+                </div>
+                <div>
+                    <label for="purchase-product-id">Product ID:</label>
+                    <input type="text" id="purchase-product-id" required>
+                </div>
+                <div>
+                    <label for="purchase-supplier-name">Supplier Name:</label>
+                    <select id="purchase-supplier-name">
+                        
+                    </select>
+                </div>
+                <div>
+                    <label for="purchase-quantity">Quantity Ordered:</label>
+                    <input type="number" id="purchase-quantity" required>
+                </div>
+                <div>
+                    <label for="purchase-date">Purchase Date:</label>
+                    <input type="date" id="purchase-date" required>
+                </div>
+                <div>
+                    <label for="expected-delivery-date">Expected Delivery Date:</label>
+                    <input type="date" id="expected-delivery-date" required>
+                </div>
+                <button type="submit">Save Purchase</button>
+            </form>
+        </section> -->
+
+        <!-- Other sections can be added similarly -->
+    </main>
+
+    <script src="/js/dashboard.js"></script>
+</body>
+
+</html>
