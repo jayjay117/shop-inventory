@@ -1,4 +1,4 @@
-/* styles.css */
+
 * {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -33,7 +33,7 @@ body {
     height: calc(100vh - 70px);
     padding-right: 5px;
     margin-top: 21px;
-    /* background-color: red; */
+ 
 }
 
 .sidebar ul li a {
@@ -42,7 +42,7 @@ body {
     display: block;
     padding: 10px;
     border-radius: 4px;
-    /* transition: background-color 0.3s, color 0.3s; */
+   
 }
 
 /* .sidebar ul li a:hover {
@@ -54,10 +54,10 @@ body {
 
 .sidebar ul li a:focus {
     background-color: #0275d8;
-    /* Change to blue or any color you prefer for focus */
+  
     color: white;
     outline: none;
-    /* Removes the default focus outline */
+
 }
 
 .sidebar ul li a.clicked {
@@ -118,7 +118,7 @@ body {
     background-color: #fff;
     margin: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Optional: Adds shadow for better visibility */
+ 
     z-index: 10;
     border: 1px solid #fff;
     margin-right: 20px;
@@ -153,9 +153,7 @@ button {
     background-color: #c9302c;
 }
 
-/* styles.css */
 
-/* Product Information Section */
 #product-info-section {
     padding: 20px;
     background-color: #f9f9f9;
@@ -165,7 +163,7 @@ button {
     margin: 20px auto;
 }
 
-/* Section Title */
+
 #product-info-section h2 {
     font-size: 1.5rem;
     font-weight: bold;
@@ -174,7 +172,6 @@ button {
     color: #333;
 }
 
-/* Form Layout */
 #product-info-form {
     display: flex;
     flex-direction: column;
@@ -193,7 +190,7 @@ button {
     box-sizing: border-box;
 }
 
-/* Button Styling */
+
 #product-info-form button {
     padding: 10px;
     font-size: 1rem;
@@ -209,15 +206,7 @@ button {
     background-color: #0056b3;
 }
 
-/* Prevent Overflow Issues */
-/* html,
-body {
-    margin: 0;
-    padding: 0;
-} */
 
-/* Stock css section */
-/* Stock Details Section */
 #stock-details-section {
     padding: 20px;
     background-color: #f8f9fa;
@@ -328,7 +317,7 @@ body {
     background: #0056b3;
 }
 
-/* Table Styling */
+
 #supplier-table {
     width: 100%;
     border-collapse: collapse;
@@ -356,7 +345,7 @@ body {
     background: #f1f1f1;
 }
 
-/* Purchasing and Restocking Section */
+
 #purchasing-section {
     padding: 20px;
     background-color: #f9f9f9;

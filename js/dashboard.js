@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Initial setup for switching sections
+   
     const sections = document.querySelectorAll('.section');
     const sidebarLinks = document.querySelectorAll('.sidebar a');
 
-    // Show the Overview section by default
+   
     const overviewSection = document.getElementById('overview-section');
     overviewSection.classList.add('visible');
 
-    // Handle section link clicks
+   
     sidebarLinks.forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault();
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.href = 'login.html';
     });
 
-    // Fetch and display data for Overview
+   
     const updateOverviewStockCount = () => {
         const currentQuantity = localStorage.getItem('currentQuantity') || 0;
         document.getElementById('stock-count').textContent = currentQuantity;
@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('sales-count').textContent = salesCount;
     document.getElementById('order-count').textContent = orderCount;
 
-    // Update stock count in the Overview section
+
     updateOverviewStockCount();
 
-    // Product Information Form Submission
+  
     const productInfoForm = document.getElementById('product-info-form');
     if (productInfoForm) {
         productInfoForm.addEventListener('submit', function (event) {
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const unitOfMeasure = document.getElementById('unit-of-measure').value;
             const expiryDate = document.getElementById('expiry-date').value;
 
-            // Save the product information to localStorage
+          
             const products = JSON.parse(localStorage.getItem('products') || '[]');
             products.push({
                 productId,
