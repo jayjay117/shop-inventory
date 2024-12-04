@@ -20,13 +20,14 @@
             <li><a href="#" id="stock-details-link">Stock Details</a></li>
             <li><a href="#" id="supplier-info-link">Supplier Information</a></li>
             <li><a href="#" id="purchasing-restocking-link">Purchasing and Restocking</a></li>
-            <li><a href="#" id="sales-info-link">Sales Information</a></li>
+            <li><a href="#" id="sales-information-link">Sales Information</a></li> <!-- Fixed ID -->
             <li><a href="#" id="inventory-adjustments-link">Inventory Adjustments</a></li>
-            <li><a href="#" id="pricing-info-link">Pricing Information</a></li>
+            <li><a href="#" id="pricing-information-link">Pricing Information</a></li>
             <li><a href="#" id="reports-analysis-link">Reports and Analysis</a></li>
             <li><a href="#" id="order-management-link">Order Management</a></li>
-            <li><a href="#" id="user-access-security-link">User Access and Security</a></li>
+            <li><a href="#" id="user-access-link">User Access and Security</a></li>
         </ul>
+
     </aside>
 
     <!-- Main Content -->
@@ -164,7 +165,7 @@
         </section>
 
         <!-- Purchasing and Restocking Section -->
-        <section id="purchasing-and-restocking-section" class="section">
+        <section id="purchasing-restocking-section" class="section">
             <h2>Purchasing and Restocking</h2>
             <form id="purchasing-form">
                 <div>
@@ -197,8 +198,369 @@
             </form>
         </section>
 
+        <!-- sales information section -->
+        <section id="sales-information-section" class="section">
+            <h2>Sales Information</h2>
+            <div class="sales-table-container">
+                <table id="sales-table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity Sold</th>
+                            <th>Total Sales (₦)</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Sales entries will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="sales-info-update">
+                <button id="add-sales" class="btn">Add Sales</button>
+            </div>
+        </section>
 
+        <!-- inventory adjustments section -->
+        <div id="inventory-adjustments-section" class="section">
+            <h2>Inventory Adjustments</h2>
 
+            <!-- Adjustment Form -->
+            <form id="inventory-adjustments-form">
+                <label for="adjustment-type">Adjustment Type:</label>
+                <select id="adjustment-type" required>
+                    <option value="" disabled selected>Select adjustment type</option>
+                    <option value="Damage">Damage</option>
+                    <option value="Theft">Theft</option>
+                    <option value="Returns">Returns</option>
+                </select>
+
+                <label for="adjustment-reason">Reason:</label>
+                <input type="text" id="adjustment-reason" placeholder="Enter reason for adjustment" required>
+
+                <label for="adjusted-item">Item Name:</label>
+                <input type="text" id="adjusted-item" placeholder="Enter item name" required>
+
+                <label for="adjusted-quantity">Quantity:</label>
+                <input type="number" id="adjusted-quantity" placeholder="Enter quantity affected" required>
+
+                <label for="responsible-person">Person Responsible:</label>
+                <input type="text" id="responsible-person" placeholder="Enter name of responsible person" required>
+
+                <button type="submit" class="add-inventory">Save Adjustment</button>
+            </form>
+
+            <!-- Adjustment Log -->
+            <h3>Adjustment Log</h3>
+            <table id="adjustment-log-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Reason</th>
+                        <th>Responsible Person</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Adjustment logs will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pricing information section -->
+        <div id="pricing-information-section" class="section">
+            <h2>Pricing Information</h2>
+            <form id="pricing-information-form">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="pricing-product-name" required>
+
+                <label for="cost-price">Cost Price per Unit:</label>
+                <input type="number" id="cost-price" step="0.01" required>
+
+                <label for="selling-price">Selling Price per Unit:</label>
+                <input type="number" id="selling-price" step="0.01" required>
+
+                <label for="discounts">Discounts and Promotions:</label>
+                <textarea id="discounts" placeholder="e.g., 10% off from Dec 1 - Dec 10"></textarea>
+
+                <label for="tax-rate">Tax Rate Applied (%):</label>
+                <input type="number" id="tax-rate" step="0.01">
+
+                <button type="submit">Save Pricing Information</button>
+            </form>
+
+            <h3>Pricing Log</h3>
+            <table id="pricing-log-table" border="1">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Cost Price</th>
+                        <th>Selling Price</th>
+                        <th>Discounts/Promotions</th>
+                        <th>Tax Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic content goes here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- report and analysis section -->
+        <section id="reports-analysis-section" class="section">
+            <h2>Reports and Analysis</h2>
+
+            <!-- Low Stock Alerts -->
+            <div class="report-container">
+                <h3>Low Stock Alerts</h3>
+                <table id="low-stock-alerts-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Current Quantity</th>
+                            <th>Minimum Stock Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Overstock Reports -->
+            <div class="report-container">
+                <h3>Overstock Reports</h3>
+                <table id="overstock-reports-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Current Quantity</th>
+                            <th>Maximum Stock Capacity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Expiry Reports -->
+            <div class="report-container">
+                <h3>Expiry Reports</h3>
+                <table id="expiry-reports-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Expiry Date</th>
+                            <th>Days to Expiry</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Sales Reports -->
+
+            <!-- Supplier Performance -->
+            <div class="report-container">
+                <h3>Supplier Performance</h3>
+                <table id="supplier-performance-table">
+                    <thead>
+                        <tr>
+                            <th>Supplier</th>
+                            <th>Timeliness</th>
+                            <th>Accuracy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Profit Margins -->
+            <div class="report-container">
+                <h3>Profit Margins</h3>
+                <table id="profit-margins-table">
+                    <thead>
+                        <tr>
+                            <th>Product Category</th>
+                            <th>Profit Margin (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Order Management Section -->
+        <section id="order-management-section" class="section">
+            <h2>Order Management</h2>
+            <div class="order-summary">
+                <h3>Order Overview</h3>
+                <p>Orders Received: <span id="order-count">0</span></p>
+                <p>Pending Orders: <span id="pending-orders-count">0</span></p>
+                <p>Shipped Orders: <span id="shipped-orders-count">0</span></p>
+            </div>
+
+            <div class="order-table-container">
+                <h3>Order Details</h3>
+                <table id="order-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer Name</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Status</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="add-order-form">
+                <h3>Add New Order</h3>
+                <form id="add-order-form">
+                    <label for="order-id">Order ID:</label>
+                    <input type="text" id="order-id" required>
+
+                    <label for="customer-name">Customer Name:</label>
+                    <input type="text" id="customer-name" required>
+
+                    <label for="product">Product:</label>
+                    <input type="text" id="product" required>
+
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" required>
+
+                    <label for="status">Order Status:</label>
+                    <select id="status" required>
+                        <option value="Pending">Pending</option>
+                        <option value="Shipped">Shipped</option>
+                        <option value="Delivered">Delivered</option>
+                    </select>
+
+                    <button type="submit">Add Order</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- User Access and Security Section -->
+        <section id="user-access-section" class="section">
+            <h2>User Access and Security</h2>
+
+            <!-- Employee Roles and Permissions -->
+            <div class="roles-permissions">
+                <h3>Employee Roles and Permissions</h3>
+                <form id="role-management-form">
+                    <label for="employee-name">Employee Name:</label>
+                    <input type="text" id="employee-name" required>
+
+                    <label for="role">Select Role:</label>
+                    <select id="role" required>
+                        <option value="manager">Manager</option>
+                        <option value="cashier">Cashier</option>
+                        <option value="stock-manager">Stock Manager</option>
+                    </select>
+
+                    <button type="submit" id="assign-role-button">Assign Role</button>
+                </form>
+                <h4>Current Users</h4>
+                <table id="user-roles-table">
+                    <thead>
+                        <tr>
+                            <th>Employee Name</th>
+                            <th>Role</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic Content: List of users and roles -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Activity Logs -->
+            <div class="activity-logs">
+                <h3>Activity Logs</h3>
+                <table id="activity-log-table">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Action</th>
+                            <th>Date/Time</th>
+                            <th>Affected Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic Content: Activity logs will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- User Access and Security Section -->
+        <section id="user-access-section" class="section">
+            <h2>User Access and Security</h2>
+
+            <!-- Employee Roles and Permissions -->
+            <div class="roles-permissions">
+                <h3>Employee Roles and Permissions</h3>
+                <form id="role-management-form">
+                    <label for="employee-name">Employee Name:</label>
+                    <input type="text" id="employee-name" required>
+
+                    <label for="role">Select Role:</label>
+                    <select id="role" required>
+                        <option value="manager">Manager</option>
+                        <option value="cashier">Cashier</option>
+                        <option value="stock-manager">Stock Manager</option>
+                    </select>
+
+                    <button type="submit" id="assign-role-button">Assign Role</button>
+                </form>
+                <h4>Current Users</h4>
+                <table id="user-roles-table">
+                    <thead>
+                        <tr>
+                            <th>Employee Name</th>
+                            <th>Role</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic Content: List of users and roles -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Activity Logs -->
+            <div class="activity-logs">
+                <h3>Activity Logs</h3>
+                <table id="activity-log-table">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Action</th>
+                            <th>Date/Time</th>
+                            <th>Affected Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic Content: Activity logs will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
     </main>
 

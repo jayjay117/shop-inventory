@@ -1,4 +1,3 @@
-
 * {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -33,7 +32,7 @@ body {
     height: calc(100vh - 70px);
     padding-right: 5px;
     margin-top: 21px;
- 
+
 }
 
 .sidebar ul li a {
@@ -42,7 +41,7 @@ body {
     display: block;
     padding: 10px;
     border-radius: 4px;
-   
+
 }
 
 /* .sidebar ul li a:hover {
@@ -54,7 +53,7 @@ body {
 
 .sidebar ul li a:focus {
     background-color: #0275d8;
-  
+
     color: white;
     outline: none;
 
@@ -118,7 +117,7 @@ body {
     background-color: #fff;
     margin: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
- 
+
     z-index: 10;
     border: 1px solid #fff;
     margin-right: 20px;
@@ -365,6 +364,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding: 24px;
 }
 
 #purchasing-form label {
@@ -403,4 +403,497 @@ button {
 
 #purchasing-form button:hover {
     background-color: #0056b3;
+}
+
+/* sales information section  */
+
+
+
+/* Form Styling */
+#sales-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#sales-form label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#sales-form input {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    width: calc(33.333% - 20px);
+    /* Distribute inputs in rows of three */
+    box-sizing: border-box;
+}
+
+#sales-form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#sales-form button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#sales-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Sales Table Styling */
+#sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
+#sales-table th {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+#sales-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#sales-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Alternate Row Coloring */
+#sales-table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* inventory adjustment section */
+
+#inventory-adjustments-section {
+    padding: 20px;
+}
+
+#inventory-adjustments-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+#inventory-adjustments-form input,
+#inventory-adjustments-form select,
+#inventory-adjustments-form button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#adjustment-log-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#adjustment-log-table th,
+#adjustment-log-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#adjustment-log-table th {
+    background-color: #f4f4f4;
+}
+
+#inventory-adjustments-form .add-inventory {
+    background-color: #007bff;
+}
+
+#inventory-adjustments-form .add-inventory:hover {
+    background-color: #0056b3;
+}
+
+/* pricing information section */
+#pricing-information-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#pricing-information-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#pricing-information-section form {
+    margin-bottom: 20px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+#pricing-information-section form label {
+    font-weight: bold;
+    color: #555;
+}
+
+#pricing-information-section form input,
+#pricing-information-section form textarea,
+#pricing-information-section form button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#pricing-information-section form input:focus,
+#pricing-information-section form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#pricing-information-section form button {
+    grid-column: span 2;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#pricing-information-section form button:hover {
+    background-color: #0056b3;
+}
+
+#pricing-information-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+#pricing-information-section table th,
+#pricing-information-section table td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+    color: #555;
+}
+
+#pricing-information-section table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+#pricing-information-section table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#pricing-information-section table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Reports and Analysis Section */
+#reports-and-analysis-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#reports-and-analysis-section h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.report-container {
+    margin-bottom: 30px;
+    margin-top: 40px;
+
+}
+
+.report-container h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.report-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+.report-container table th,
+.report-container table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.report-container table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.report-container table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.report-container table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Order Management Section Styles */
+#order-management-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.order-summary {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.order-summary h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.order-summary p {
+    font-size: 16px;
+    color: #777;
+}
+
+.order-table-container {
+    margin-bottom: 20px;
+}
+
+#order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#order-table th,
+#order-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#order-table th {
+    background-color: #f2f2f2;
+    color: #555;
+}
+
+#order-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.add-order-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-order-form h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.add-order-form label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.add-order-form input,
+.add-order-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-order-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-order-form button:hover {
+    background-color: #0056b3;
+}
+
+/* #assign-role-button {
+    background-color: #007bff;
+}
+
+#assign-role-button:hover {
+    background-color: #0056b3;
+} */
+
+/* User Access and Security Styles */
+#user-access-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+#user-access-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Employee Roles and Permissions */
+#user-access-section .roles-permissions {
+    margin-bottom: 40px;
+}
+
+#user-access-section .roles-permissions h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#user-access-section .roles-permissions form {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+#user-access-section .roles-permissions form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+#user-access-section .roles-permissions form input,
+#user-access-section .roles-permissions form select {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#user-access-section .roles-permissions form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#user-access-section .roles-permissions form button:hover {
+    background-color: #0056b3;
+}
+
+#user-access-section .roles-permissions h4 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* User Roles Table */
+#user-access-section .roles-permissions table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#user-access-section .roles-permissions table th,
+#user-access-section .roles-permissions table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#user-access-section .roles-permissions table th {
+    background-color: #f2f2f2;
+}
+
+#user-access-section .roles-permissions table button.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+#user-access-section .roles-permissions table button.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Activity Logs */
+#user-access-section .activity-logs {
+    margin-bottom: 40px;
+}
+
+#user-access-section .activity-logs h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#user-access-section .activity-logs table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#user-access-section .activity-logs table th,
+#user-access-section .activity-logs table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#user-access-section .activity-logs table th {
+    background-color: #f2f2f2;
 }
